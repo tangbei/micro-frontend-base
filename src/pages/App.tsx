@@ -3,7 +3,9 @@ import { Layout } from 'antd';
 import '@/assets/styles/index.scss';
 import Header from '@/components/Header';
 import Sider from '@/components/Sider';
-
+import { observer } from 'mobx-react';
+import { rootStore } from '@/store';
+import { rootStoreContext } from '@/store/useStoreContext';
 import style from './index.module.scss';
 
 const { Content } = Layout;
@@ -16,17 +18,17 @@ const contentStyle: React.CSSProperties = {
   textAlign: 'center',
   minHeight: 120,
   lineHeight: '120px',
-  color: '#fff',
-  backgroundColor: '#0958d9',
+  // color: '#fff',
+  // backgroundColor: '#0958d9',
 };
 
-const App = () => {
+const Main = () => {
   return (
     <Suspense fallback={<Loading />}>
-      <Layout>
-        <Header />
+      <Layout className={style.layout}>
+        <Sider />
         <Layout>
-          <Sider />
+          <Header />
           <Content style={contentStyle}>Content</Content>
         </Layout>
       </Layout>
@@ -34,4 +36,14 @@ const App = () => {
   );
 };
 
-export default App;
+const App = () => {
+  return (
+    // <rootStoreContext.Provider value={rootStore}>
+      <Main />
+    // </rootStoreContext.Provider>
+  );
+};
+
+
+
+export default observer(App);

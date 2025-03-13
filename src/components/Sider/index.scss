@@ -1,0 +1,19 @@
+.sider {
+  width: 100%;
+}
+
+.sider_header {
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  line-height: 56px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.sider_menu {
+  height: calc(100vh - 56px);
+  overflow-y: scroll;
+  padding-bottom: 20px;
+}

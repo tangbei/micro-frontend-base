@@ -1,7 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { url } = require('inspector');
+const Dotenv = require('dotenv-webpack');
+
+// const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   // 入口文件
@@ -62,6 +64,9 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[contenthash:8].css',
+    }),
+    new Dotenv({
+      path: `../build/.env.${process.env.NODE_ENV}`
     })
   ],
 };
