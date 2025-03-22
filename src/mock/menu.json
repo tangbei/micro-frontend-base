@@ -1,0 +1,419 @@
+{
+  "code": 200,
+  "message": "操作成功",
+  "data": [
+      {
+          "name": "home",
+          "path": "/home",
+          "alwaysShow": false,
+          "element": "/home",
+          "hidden": false,
+          "query": "",
+          "perms": "home:list",
+          "meta": {
+              "title": "首页",
+              "link": null,
+              "noCache": false,
+              "icon": "shouye"
+          }
+      },
+      {
+          "name": "profile",
+          "path": "/profile",
+          "alwaysShow": false,
+          "element": "/user/profile",
+          "hidden": true,
+          "query": "",
+          "perms": "profile:list",
+          "meta": {
+              "title": "个人中心",
+              "link": null,
+              "noCache": false,
+              "icon": "user"
+          }
+      },
+      {
+          "name": "system",
+          "path": "/system",
+          "alwaysShow": true,
+          "element": "",
+          "hidden": false,
+          "children": [
+              {
+                  "name": "user",
+                  "path": "user",
+                  "query": "",
+                  "alwaysShow": false,
+                  "element": "/system/user",
+                  "hidden": false,
+                  "perms": "system:user:list",
+                  "meta": {
+                      "title": "用户管理",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "user"
+                  }
+              },
+              {
+                  "name": "userAuth/:userId",
+                  "path": "userAuth/:userId",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/system/user/userAuth",
+                  "hidden": true,
+                  "perms": "system:userAuth:list",
+                  "meta": {
+                      "title": "分配角色",
+                      "link": null,
+                      "noCache": true,
+                      "icon": ""
+                  }
+              },
+              {
+                  "name": "role",
+                  "path": "role",
+                  "query": "",
+                  "alwaysShow": false,
+                  "element": "/system/role",
+                  "hidden": false,
+                  "perms": "system:role:list",
+                  "meta": {
+                      "title": "角色管理",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "角色管理"
+                  }
+              },
+              {
+                  "name": "roleUser/:roleId",
+                  "path": "roleUser/:roleId",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/system/role/roleUser",
+                  "hidden": true,
+                  "perms": "system:roleUser:list",
+                  "meta": {
+                      "title": "分配用户",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "用户"
+                  }
+              },
+              {
+                  "name": "menu",
+                  "path": "menu",
+                  "query": "",
+                  "alwaysShow": false,
+                  "element": "/system/menu",
+                  "hidden": false,
+                  "perms": "system:menu:list",
+                  "meta": {
+                      "title": "菜单管理",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "tree-table"
+                  }
+              },
+              {
+                  "name": "dept",
+                  "path": "dept",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/system/dept",
+                  "hidden": false,
+                  "perms": "system:dept:list",
+                  "meta": {
+                      "title": "部门管理",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "tree"
+                  }
+              },
+              {
+                  "name": "post",
+                  "path": "post",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/system/post",
+                  "hidden": false,
+                  "perms": "system:post:list",
+                  "meta": {
+                      "title": "岗位管理",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "post"
+                  }
+              },
+              {
+                  "name": "dictType",
+                  "path": "dictType",
+                  "query": "",
+                  "alwaysShow": false,
+                  "element": "/system/dictType",
+                  "hidden": false,
+                  "perms": "system:dictType:list",
+                  "meta": {
+                      "title": "字典管理",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "dict"
+                  }
+              },
+              {
+                  "name": "dictData/:dictType",
+                  "path": "dictData/:dictType",
+                  "query": "",
+                  "alwaysShow": false,
+                  "element": "/system/dictData",
+                  "hidden": true,
+                  "perms": "system:dictData:list",
+                  "meta": {
+                      "title": "字典数据",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "dict"
+                  }
+              },
+              {
+                  "name": "config",
+                  "path": "config",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/system/config",
+                  "hidden": false,
+                  "perms": "system:config:list",
+                  "meta": {
+                      "title": "参数设置",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "edit"
+                  }
+              },
+              {
+                  "name": "notice",
+                  "path": "notice",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/system/notice",
+                  "hidden": false,
+                  "perms": "system:notice:list",
+                  "meta": {
+                      "title": "通知公告",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "email"
+                  }
+              },
+              {
+                  "name": "logMan",
+                  "path": "logMan",
+                  "query": null,
+                  "alwaysShow": true,
+                  "element": null,
+                  "hidden": false,
+                  "children": [
+                      {
+                          "name": "operlog",
+                          "path": "operlog",
+                          "query": null,
+                          "alwaysShow": false,
+                          "element": "/system/logMan/operlog",
+                          "hidden": false,
+                          "perms": "system:operlog:list",
+                          "meta": {
+                              "title": "操作日志",
+                              "link": null,
+                              "noCache": true,
+                              "icon": "form"
+                          }
+                      },
+                      {
+                          "name": "logininfor",
+                          "path": "logininfor",
+                          "query": null,
+                          "alwaysShow": false,
+                          "element": "/system/logMan/logininfor",
+                          "hidden": false,
+                          "perms": "system:logininfor:list",
+                          "meta": {
+                              "title": "登录日志",
+                              "link": null,
+                              "noCache": true,
+                              "icon": "logininfor"
+                          }
+                      }
+                  ],
+                  "perms": null,
+                  "meta": {
+                      "title": "日志管理",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "log"
+                  }
+              }
+          ],
+          "query": "",
+          "perms": "",
+          "meta": {
+              "title": "系统管理",
+              "link": null,
+              "noCache": true,
+              "icon": "设置看板"
+          }
+      },
+      {
+          "name": "monitor",
+          "path": "/monitor",
+          "alwaysShow": true,
+          "element": null,
+          "hidden": false,
+          "children": [
+              {
+                  "name": "online",
+                  "path": "online",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/monitor/online",
+                  "hidden": false,
+                  "perms": "monitor:online:list",
+                  "meta": {
+                      "title": "在线用户",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "online"
+                  }
+              },
+              {
+                  "name": "job",
+                  "path": "job",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/monitor/job",
+                  "hidden": false,
+                  "perms": "monitor:job:list",
+                  "meta": {
+                      "title": "定时任务",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "job"
+                  }
+              },
+              {
+                  "name": "jobLog/:jobId",
+                  "path": "jobLog/:jobId",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/monitor/jobLog",
+                  "hidden": true,
+                  "perms": "monitor:jobLog:list",
+                  "meta": {
+                      "title": "调度日志",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "jobLog"
+                  }
+              },
+              {
+                  "name": "server",
+                  "path": "server",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/monitor/server",
+                  "hidden": false,
+                  "perms": "monitor:server:list",
+                  "meta": {
+                      "title": "服务监控",
+                      "link": null,
+                      "noCache": false,
+                      "icon": "server"
+                  }
+              },
+              {
+                  "name": "cache",
+                  "path": "cache",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/monitor/cache/",
+                  "hidden": false,
+                  "perms": "monitor:cache:list",
+                  "meta": {
+                      "title": "缓存监控",
+                      "link": null,
+                      "noCache": false,
+                      "icon": "redis"
+                  }
+              },
+              {
+                  "name": "cacheList",
+                  "path": "cacheList",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/monitor/cacheList/",
+                  "hidden": false,
+                  "perms": "monitor:cacheList:list",
+                  "meta": {
+                      "title": "缓存列表",
+                      "link": null,
+                      "noCache": false,
+                      "icon": "redis-list"
+                  }
+              }
+          ],
+          "query": null,
+          "perms": null,
+          "meta": {
+              "title": "系统监控",
+              "link": null,
+              "noCache": true,
+              "icon": "monitor"
+          }
+      },
+      {
+          "name": "tool",
+          "path": "/tool",
+          "alwaysShow": true,
+          "element": null,
+          "hidden": false,
+          "children": [
+              {
+                  "name": "gen",
+                  "path": "gen",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/tool/gen",
+                  "hidden": false,
+                  "perms": "tool:gen:list",
+                  "meta": {
+                      "title": "代码生成",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "闪电"
+                  }
+              },
+              {
+                  "name": "genEdit/:tableId",
+                  "path": "genEdit/:tableId",
+                  "query": null,
+                  "alwaysShow": false,
+                  "element": "/tool/genEdit",
+                  "hidden": true,
+                  "perms": "tool:genEdit:list",
+                  "meta": {
+                      "title": "修改生成配置",
+                      "link": null,
+                      "noCache": true,
+                      "icon": "edit"
+                  }
+              }
+          ],
+          "query": null,
+          "perms": null,
+          "meta": {
+              "title": "系统工具",
+              "link": null,
+              "noCache": true,
+              "icon": "table"
+          }
+      }
+  ]
+}
