@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { Layout } from 'antd';
 import Header from '@/components/Header';
 import Sider from '@/components/Sider';
@@ -18,6 +18,11 @@ const contentStyle: React.CSSProperties = {
 };
 
 const Home = () => {
+
+  useEffect(() => {
+    // console.log('初始化了几次');
+  }, []);
+
   return (
     <Suspense fallback={<Loading />}>
       <Layout className={style.layout}>
